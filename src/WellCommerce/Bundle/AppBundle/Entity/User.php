@@ -55,6 +55,7 @@ class User implements \Serializable, EquatableInterface, UserInterface, EntityIn
     {
         $this->roles  = new ArrayCollection();
         $this->groups = new ArrayCollection();
+        $this->apiKey = strtoupper(uniqid());
     }
     
     public function getFirstName(): string

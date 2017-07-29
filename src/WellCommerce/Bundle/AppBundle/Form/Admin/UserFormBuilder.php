@@ -80,6 +80,9 @@ class UserFormBuilder extends AbstractFormBuilder
         $apiData->addChild($this->getElement('text_field', [
             'name'  => 'apiKey',
             'label' => 'user.label.api_key',
+            'rules' => [
+                $this->getRule('required')
+            ],
         ]));
 
         $form->addFilter($this->getFilter('no_code'));
